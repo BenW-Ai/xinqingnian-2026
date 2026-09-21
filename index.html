@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新青年 · 答案在路上</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700;900&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <style id="theme-vars">
+/* ============================================
+   新青年 · 答案在路上 — Brand CSS
+   Color: 新青年红 + 墨黑 + 米白
+   Type: Serif display + Sans body
+   ============================================ */
+
+:root {
+  /* Brand Primary — 新青年红 */
+  --ny-primary: #C8102E;
+  --ny-primary-foreground: #F5F0E8;
+  --ny-primary-tint-1: #E63946;
+  --ny-primary-tint-2: #A00D24;
+  --ny-primary-tint-3: #F2A0AE;
+  --ny-primary-tint-4: #FBE5E9;
+  --ny-primary-shade-1: #8B0A20;
+  --ny-primary-shade-2: #5E0716;
+
+  /* Neutral Scale — 暖灰系 */
+  --ny-neutral-50: #FAF7F2;
+  --ny-neutral-100: #F5F0E8;
+  --ny-neutral-200: #EDE8E0;
+  --ny-neutral-300: #D4CFC7;
+  --ny-neutral-400: #B8B2A8;
+  --ny-neutral-500: #8C8C8C;
+  --ny-neutral-600: #6B6B6B;
+  --ny-neutral-700: #4A4A4A;
+  --ny-neutral-800: #2D2D2D;
+  --ny-neutral-900: #1A1A1A;
+  --ny-neutral-950: #0D0D0D;
+
+  /* Accent Colors */
+  --ny-gold: #D4A843;
+  --ny-teal: #2E6B6B;
+  --ny-amber: #B8860B;
+  --ny-paper-shadow: rgba(26,26,26,0.08);
+
+  /* State Colors */
+  --state-success: #2E7D32;
+  --state-warning: #E65100;
+  --state-error: #C8102E;
+  --state-info: #1565C0;
+
+  /* Semantic Aliases — Light Mode */
+  --ny-background: #F5F0E8;
+  --ny-foreground: #1A1A1A;
+  --ny-card: #FFFFFF;
+  --ny-card-foreground: #1A1A1A;
+  --ny-popover: #FFFFFF;
+  --ny-popover-foreground: #1A1A1A;
+  --ny-muted: #EDE8E0;
+  --ny-muted-foreground: #8C8C8C;
+  --ny-border: #D4CFC7;
+  --ny-input: #D4CFC7;
+  --ny-ring: #C8102E;
+
+  /* Radius */
+  --ny-radius-small: 4px;
+  --ny-radius-medium: 8px;
+  --ny-radius-large: 12px;
+  --ny-radius-full: 9999px;
+
+  /* Typography */
+  --ny-font-display: "Noto Serif SC", "Source Han Serif SC", "SimSun", serif;
+  --ny-font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --ny-font-latin: "Cinzel Decorative", "Cinzel", "Times New Roman", serif;
+  --ny-font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  /* Font sizes */
+  --ny-text-xs: 0.75rem;
+  --ny-text-sm: 0.875rem;
+  --ny-text-base: 1rem;
+  --ny-text-lg: 1.125rem;
+  --ny-text-xl: 1.25rem;
+  --ny-text-2xl: 1.5rem;
+  --ny-text-3xl: 1.875rem;
+  --ny-text-4xl: 2.25rem;
+  --ny-text-5xl: 3rem;
+  --ny-text-6xl: 3.75rem;
+  --ny-text-7xl: 4.5rem;
+  --ny-text-8xl: 6rem;
+}
+
+/* Dark Mode */
+.dark {
+  --ny-background: #1A1A1A;
+  --ny-foreground: #F5F0E8;
+  --ny-card: #2D2D2D;
+  --ny-card-foreground: #F5F0E8;
+  --ny-popover: #2D2D2D;
+  --ny-popover-foreground: #F5F0E8;
+  --ny-muted: #3D3D3D;
+  --ny-muted-foreground: #8C8C8C;
+  --ny-border: #4A4A4A;
+  --ny-input: #4A4A4A;
+  --ny-ring: #C8102E;
+}
+
+/* Base Typography */
+body {
+  font-family: var(--ny-font-body);
+  background-color: var(--ny-background);
+  color: var(--ny-foreground);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ny-font-display);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Utility Classes */
+.font-display { font-family: var(--ny-font-display); }
+.font-body { font-family: var(--ny-font-body); }
+.font-latin { font-family: var(--ny-font-latin); }
+.font-mono { font-family: var(--ny-font-mono); }
+
+.text-primary { color: var(--ny-primary); }
+.text-foreground { color: var(--ny-foreground); }
+.text-muted-foreground { color: var(--ny-muted-foreground); }
+
+.bg-background { background-color: var(--ny-background); }
+.bg-card { background-color: var(--ny-card); }
+.bg-primary { background-color: var(--ny-primary); }
+
+.border-border { border-color: var(--ny-border); }
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+  @theme inline {
+    --color-background: var(--ny-background);
+    --color-foreground: var(--ny-foreground);
+    --color-card: var(--ny-card);
+    --color-card-foreground: var(--ny-card-foreground);
+    --color-popover: var(--ny-popover);
+    --color-popover-foreground: var(--ny-popover-foreground);
+    --color-primary: var(--ny-primary);
+    --color-primary-foreground: var(--ny-primary-foreground);
+    --color-muted: var(--ny-muted);
+    --color-muted-foreground: var(--ny-muted-foreground);
+    --color-border: var(--ny-border);
+    --color-input: var(--ny-input);
+    --color-ring: var(--ny-ring);
+    --radius-sm: var(--ny-radius-small);
+    --radius-md: var(--ny-radius-medium);
+    --radius-lg: var(--ny-radius-large);
+  }
+  @layer base {
+    body { background: var(--ny-background); color: var(--ny-foreground); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style id="semantic-token-fallback">
+      .bg-background { background-color: var(--ny-background); }
+      .text-background { color: var(--ny-background); }
+      .border-background { border-color: var(--ny-background); }
+      .ring-background { --tw-ring-color: var(--ny-background); }
+      .bg-foreground { background-color: var(--ny-foreground); }
+      .text-foreground { color: var(--ny-foreground); }
+      .border-foreground { border-color: var(--ny-foreground); }
+      .ring-foreground { --tw-ring-color: var(--ny-foreground); }
+      .bg-card { background-color: var(--ny-card); }
+      .text-card { color: var(--ny-card); }
+      .border-card { border-color: var(--ny-card); }
+      .ring-card { --tw-ring-color: var(--ny-card); }
+      .bg-card-foreground { background-color: var(--ny-card-foreground); }
+      .text-card-foreground { color: var(--ny-card-foreground); }
+      .border-card-foreground { border-color: var(--ny-card-foreground); }
+      .ring-card-foreground { --tw-ring-color: var(--ny-card-foreground); }
+      .bg-popover { background-color: var(--ny-popover); }
+      .text-popover { color: var(--ny-popover); }
+      .border-popover { border-color: var(--ny-popover); }
+      .ring-popover { --tw-ring-color: var(--ny-popover); }
+      .bg-popover-foreground { background-color: var(--ny-popover-foreground); }
+      .text-popover-foreground { color: var(--ny-popover-foreground); }
+      .border-popover-foreground { border-color: var(--ny-popover-foreground); }
+      .ring-popover-foreground { --tw-ring-color: var(--ny-popover-foreground); }
+      .bg-primary { background-color: var(--ny-primary); }
+      .text-primary { color: var(--ny-primary); }
+      .border-primary { border-color: var(--ny-primary); }
+      .ring-primary { --tw-ring-color: var(--ny-primary); }
+      .bg-primary-foreground { background-color: var(--ny-primary-foreground); }
+      .text-primary-foreground { color: var(--ny-primary-foreground); }
+      .border-primary-foreground { border-color: var(--ny-primary-foreground); }
+      .ring-primary-foreground { --tw-ring-color: var(--ny-primary-foreground); }
+      .bg-muted { background-color: var(--ny-muted); }
+      .text-muted { color: var(--ny-muted); }
+      .border-muted { border-color: var(--ny-muted); }
+      .ring-muted { --tw-ring-color: var(--ny-muted); }
+      .bg-muted-foreground { background-color: var(--ny-muted-foreground); }
+      .text-muted-foreground { color: var(--ny-muted-foreground); }
+      .border-muted-foreground { border-color: var(--ny-muted-foreground); }
+      .ring-muted-foreground { --tw-ring-color: var(--ny-muted-foreground); }
+      .bg-border { background-color: var(--ny-border); }
+      .text-border { color: var(--ny-border); }
+      .border-border { border-color: var(--ny-border); }
+      .ring-border { --tw-ring-color: var(--ny-border); }
+      .bg-input { background-color: var(--ny-input); }
+      .text-input { color: var(--ny-input); }
+      .border-input { border-color: var(--ny-input); }
+      .ring-input { --tw-ring-color: var(--ny-input); }
+      .bg-ring { background-color: var(--ny-ring); }
+      .text-ring { color: var(--ny-ring); }
+      .border-ring { border-color: var(--ny-ring); }
+      .ring-ring { --tw-ring-color: var(--ny-ring); }
+    </style>
+</head>
+<body>
+
+<div class="deck" id="deck">
+
+  <!-- Slide 1: Cover -->
+  <section class="slide paper-bg" data-theme="light">
+    <div class="slide-inner">
+      <header class="text-center mb-8">
+        <h1 class="cover-title">
+          <span class="reveal" data-delay="0">新</span>
+          <span class="reveal" data-delay="120">青</span>
+          <span class="reveal" data-delay="240">年</span>
+        </h1>
+        <p class="la-jeunesse reveal" data-delay="450">LA JEUNESSE</p>
+        <p class="cover-subtitle reveal" data-delay="600">SMG青马4组主撰</p>
+      </header>
+
+      <div class="cartouche-frame frame-draw reveal" data-delay="900">
+        <div class="cartouche-flourish top"></div>
+        <div class="cartouche-flourish bottom"></div>
+        <div class="text-center px-8 py-4">
+          <h2 class="main-title reveal" data-delay="1300">答案在路上</h2>
+          <div class="double-line-gold my-5 reveal" data-delay="1500"></div>
+          <p class="gold-sub reveal" data-delay="1700">· 新青年正同行 ·</p>
+          <p class="cover-desc reveal" data-delay="1900">AI时代赋能文化传媒的探索与思考</p>
+        </div>
+      </div>
+
+      <footer class="text-center mt-10">
+        <p class="issue reveal" data-delay="2100">第二卷 · 2026年</p>
+        <p class="publisher reveal" data-delay="2300">上海 · SMG印行</p>
+      </footer>
+    </div>
+  </section>
+
+  <!-- Slide 2: Contents -->
+  <section class="slide paper-bg" data-theme="light">
+    <div class="slide-inner narrow">
+      <h2 class="section-title reveal" data-delay="0">目录</h2>
+      <div class="double-line mt-4 mb-10 reveal" data-delay="150"></div>
+
+      <div class="magazine-frame frame-draw reveal" data-delay="400">
+        <div class="contents-grid">
+          <div class="vertical-col reveal" data-delay="700">
+            <p class="year">1915年</p>
+            <p>陈独秀创办新青年</p>
+            <p>呼唤德先生与赛先生</p>
+          </div>
+          <div class="separator reveal" data-delay="900">？</div>
+          <div class="horizontal-col reveal" data-delay="1100">
+            <p class="year">2026年</p>
+            <p>AI浪潮席卷而来</p>
+            <p>同样的问题摆在面前</p>
+            <p class="big-question">AI越强，我们是谁？</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 text-center reveal" data-delay="1500">
+        <span class="red-seal">新青年 · 第二期</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 3: Three Characters Centerfold -->
+  <section class="slide paper-bg" data-theme="light">
+    <div class="slide-inner">
+      <p class="latin-caption reveal" data-delay="0">LA JEUNESSE</p>
+
+      <div class="three-chars">
+        <div class="cartouche-frame char-box frame-draw reveal" data-delay="200">
+          <div class="cartouche-flourish top"></div>
+          <div class="cartouche-flourish bottom"></div>
+          <div class="char-main" style="color: var(--ny-primary);">新</div>
+          <div class="char-label">守正创新</div>
+        </div>
+        <div class="cartouche-frame char-box frame-draw reveal" data-delay="500">
+          <div class="cartouche-flourish top"></div>
+          <div class="cartouche-flourish bottom"></div>
+          <div class="char-main" style="color: var(--ny-teal);">青</div>
+          <div class="char-label">青春本色</div>
+        </div>
+        <div class="cartouche-frame char-box frame-draw reveal" data-delay="800">
+          <div class="cartouche-flourish top"></div>
+          <div class="cartouche-flourish bottom"></div>
+          <div class="char-main" style="color: var(--ny-amber);">年</div>
+          <div class="char-label">以年为尺</div>
+        </div>
+      </div>
+
+      <p class="center-question reveal" data-delay="1200">AI时代，我们要成长为怎样的新青年？</p>
+    </div>
+  </section>
+
+  <!-- Slide 4: 新 · Chapter Opener -->
+  <section class="slide paper-bg-dark" data-theme="dark">
+    <div class="slide-inner row-layout">
+      <div class="vertical-text chapter-char reveal" data-delay="0" style="color: var(--ny-primary);">新</div>
+      <div class="magazine-frame dark-frame frame-draw reveal" data-delay="400">
+        <div class="chapter-text">
+          <h2 class="chapter-title reveal" data-delay="800">守正创新</h2>
+          <p class="chapter-sub reveal" data-delay="1000">懂底线 · 会创新 · 能落地</p>
+          <div class="double-line-gold my-6 reveal" data-delay="1200"></div>
+          <span class="red-seal reveal" data-delay="1400">第一章</span>
+        </div>
+      </div>
+      <div class="corner-group">
+        <div class="corner-ornament tl reveal" data-delay="1600"></div>
+        <div class="corner-ornament tr reveal" data-delay="1600"></div>
+        <div class="corner-ornament bl reveal" data-delay="1600"></div>
+        <div class="corner-ornament br reveal" data-delay="1600"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 5: 新 · 守正 -->
+  <section class="slide paper-bg" data-theme="light">
+    <div class="slide-inner">
+      <div class="slide-header reveal" data-delay="0">
+        <span class="red-seal">守正</span>
+        <h2 class="slide-heading">文化传媒的底线是什么</h2>
+      </div>
+      <div class="double-line mt-4 mb-10 reveal" data-delay="200"></div>
+
+      <div class="card-grid four-cards">
+        <div class="magazine-frame value-card frame-draw reveal" data-delay="400">
+          <div class="card-bar" style="background: var(--ny-primary);"></div>
+          <h3>版权</h3>
+          <p>尊重原创，保护知识产权</p>
+        </div>
+        <div class="magazine-frame value-card frame-draw reveal" data-delay="550">
+          <div class="card-bar" style="background: var(--ny-teal);"></div>
+          <h3>隐私</h3>
+          <p>数据安全，用户至上</p>
+        </div>
+        <div class="magazine-frame value-card frame-draw reveal" data-delay="700">
+          <div class="card-bar" style="background: var(--ny-amber);"></div>
+          <h3>价值导向</h3>
+          <p>守住主流价值，传播正能量</p>
+        </div>
+        <div class="magazine-frame value-card frame-draw reveal" data-delay="850">
+          <div class="card-bar" style="background: var(--ny-primary);"></div>
+          <h3>社会效益</h3>
+          <p>让技术服务于公众利益</p>
+        </div>
+      </div>
+
+      <p class="page-num reveal" data-delay="1100">— 5 —</p>
+    </div>
+  </section>
+
+  <!-- Slide 6: 新 · 创新 -->
+  <section class="slide paper-bg" data-theme="light">
+    <div class="slide-inner">
+      <div class="slide-header reveal" data-delay="0">
+        <span class="red-seal">创新</span>
+        <h2 class="slide-heading">从传统综艺到AI短剧</h2>
+      </div>
+      <div class="double-line mt-4 mb-8 reveal" data-delay="200"></div>
+
+      <div class="split-layout">
+        <div class="magazine-frame text-panel frame-draw reveal" data-delay="400">
+          <p class="typing-line reveal" data-delay="700">过去：实景拍摄 · 长线录制 · 大制作</p>
+          <p class="typing-line reveal" data-delay="950">现在：AI脚本 · AI画面 · 智能剪辑 · 数字人</p>
+          <div class="double-line my-5 reveal" data-delay="1200"></div>
+          <p class="typing-line reveal" data-delay="1400">转型不是形式更换，是生产思维、创作模式、内容业态的全方位创新</p>
+        </div>
+
+        <div class="video-panel reveal" data-delay="900">
+          <span class="red-seal video-label">新青年 · 影像志</span>
+          <div class="magazine-frame video-frame">
+            <video controls preload="metadata" src="./assets/aerial-film.mp4">
+              您的浏览器不支持 HTML5 视频。
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="magazine-frame banner reveal" data-delay="1700">
+        <p>AI参与了70%的执行，人做了100%的决策</p>
+      </div>
+
+      <p class="page-num reveal" data-delay="1900">— 6 —</p>
+    </div>
+  </section>
+
+  <!-- Slide 7: 新 · 技术与传播 -->
+  <section class="slide paper-bg" data-theme="light">
+    <div class="slide-inner">
+      <div class="slide-header reveal" data-delay="0">
+        <span class="red-seal">落地</span>
+        <h2 class="slide-heading">技术与传播的双轮驱动</h2>
+      </div>
+      <div class="double-line mt-4 mb-10 reveal" data-delay="200"></div>
+
+      <div class="two-columns">
+        <div class="magazine-frame column-card frame-draw reveal" data-delay="400">
+          <div class="card-bar" style="background: var(--ny-primary);"></div>
+          <h3>平台 + 数据 + 智能</h3>
+          <p>把AI能力封装成一线可用的工具</p>
+          <p>把中台建在一线门口</p>
+        </div>
+        <div class="magazine-frame column-card frame-draw reveal" data-delay="700">
+          <div class="card-bar" style="background: var(--ny-gold);"></div>
+          <h3>新质传播力</h3>
+          <p>从流量运营向用户价值运营升级</p>
+          <p>内容 + 互动 + 商业 三驱动</p>
+        </div>
+      </div>
+
+      <p class="bottom-note reveal" data-delay="1100">以大模型做内容理解，以推荐算法实现千人千面，以知识图谱串联文商旅体展场景</p>
+      <p class="page-num reveal" data-delay="1300">— 7 —</p>
+    </div>
+  </section>
+
+  <!-- Slide 8: 青 · Chapter Opener -->
+  <section class="slide paper-bg-dark" data-theme="dark">
+    <div class="slide-inner row-layout">
+      <div class="vertical-text chapter-char reveal" data-delay="0" style="color: var(--ny-teal);">青</div>
+      <div class="magazine-frame dark-frame frame-draw reveal" data-delay="400">
+        <div class="chapter-text">
+          <h2 class="chapter-title reveal" data-delay="800">青春本色</h2>
+          <p class="chapter-sub reveal" data-delay="1000">敢闯 · 守心 · 连接</p>
+          <div class="double-line-gold my-6 reveal" data-delay="1200"></div>
+          <span class="red-seal reveal" data-delay="1400">第二章</span>
+        </div>
+      </div>
+      <div class="corner-group">
+        <div class="corner-ornament tl reveal" data-delay="1600"></div>
+        <div class="corner-ornament tr reveal" data-delay="1600"></div>
+        <div class="corner-ornament bl reveal" data-delay="1600"></div>
+        <div class="corner-ornament br reveal" data-delay="1600"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 9: 青 · 敢闯 -->
+  <section class="slide paper-bg" data-theme="light">
+    <div class="slide-inner">
+      <div class="slide-header reveal" data-delay="0">
+        <span class="red-seal">敢闯</span>
+        <h2 class="slide-heading">青年锐气啃下转型硬骨头</h2>
+      </div>
+      <div class="double-line mt-4 mb-12 reveal" data-delay="200"></div>
+
+      <div class="milestone-path reveal" data-delay="400">
+        <div class="milestone reveal" data-delay="600">
+          <span>01</span>
+          <p>放弃惯性</p>
+        </div>
+        <div class="milestone reveal" data-delay="800">
+          <span>02</span>
+          <p>从零学习</p>
+        </div>
+        <div class="milestone reveal" data-delay="1000">
+          <span>03</span>
+          <p>反复调试</p>
+        </div>
+        <div class="milestone reveal" data-delay="1200">
+          <span>04</span>
+          <p>优化协作</p>
+        </div>
+        <div class="milestone reveal" data-delay="1400">
+          <span>05</span>
+          <p>成片突破</p>
+        </div>
+      </div>
+
+      <div class="magazine-frame quote-frame reveal" data-delay="1700">
+        <p>所谓青，不是年龄的年轻，而是在行业变革面前不固守经验、在未知赛道里敢于先行先试</p>
+      </div>
+
+      <p class="page-num reveal" data-delay="2000">— 9 —</p>
+    </div>
+  </section>
+
+  <!-- Slide 10: 青 · 守心 -->
+  <section class="slide paper-bg" data-theme="light">
+    <div class="slide-inner">
+      <div class="slide-header reveal" data-delay="0">
+        <span class="red-seal">守心</span>
+        <h2 class="slide-heading">人是技术的第一道防线</h2>
+      </div>
+      <div class="double-line mt-4 mb-10 reveal" data-delay="200"></div>
+
+      <div class="card-grid three-cards">
+        <div class="magazine-frame value-card frame-draw reveal" data-delay="400">
+          <div class="card-bar" style="background: var(--ny-primary);"></div>
+          <h3>心中有温度</h3>
+          <p>AI能剪辑，但不懂哪个镜头该多停一秒</p>
+        </div>
+        <div class="magazine-frame value-card frame-draw reveal" data-delay="600">
+          <div class="card-bar" style="background: var(--ny-primary);"></div>
+          <h3>判断有逻辑</h3>
+          <p>面对舆论快、杂、准、情绪化、标签化，保持独立理性</p>
+        </div>
+        <div class="magazine-frame value-card frame-draw reveal" data-delay="800">
+          <div class="card-bar" style="background: var(--ny-primary);"></div>
+          <h3>价值有底线</h3>
+          <p>守住事实、逻辑和温度，让技术服务于人</p>
+        </div>
+      </div>
+
+      <p class="quote-italic reveal" data-delay="1200">个人表达的盔甲：事实、逻辑、温度</p>
+      <p class="page-num reveal" data-delay="1400">— 10 —</p>
+    </div>
+  </section>
+
+  <!-- Slide 11: 青 · 连接 -->
+  <section class="slide paper-bg" data-theme="light">
+    <div class="slide-inner">
+      <div class="slide-header reveal" data-delay="0">
+        <span class="red-seal">连接</span>
+        <h2 class="slide-heading">让文化传播有网感、有温度</h2>
+      </div>
+      <div class="double-line mt-4 mb-10 reveal" data-delay="200"></div>
+
+      <div class="tag-cloud">
+        <span class="magazine-frame tag reveal" data-delay="400">Citywalk</span>
+        <span class="magazine-frame tag reveal" data-delay="520">演唱会</span>
+        <span class="magazine-frame tag reveal" data-delay="640">赛事</span>
+        <span class="magazine-frame tag reveal" data-delay="760">漫展</span>
+        <span class="magazine-frame tag reveal" data-delay="880">博物馆</span>
+        <span class="magazine-frame tag reveal" data-delay="1000">夜经济</span>
+      </div>
+
+      <div class="magazine-frame center-statement frame-draw reveal" data-delay="1200">
+        <p>让App不只是工具，而是有活力的文化入口</p>
+      </div>
+
+      <p class="bottom-note reveal" data-delay="1500">用数据洞察需求 · 用算法连接内容 · 用推荐传递温度</p>
+      <p class="page-num reveal" data-delay="1700">— 11 —</p>
+    </div>
+  </section>
+
+  <!-- Slide 12: 年 · Chapter Opener -->
+  <section class="slide paper-bg-dark" data-theme="dark">
+    <div class="slide-inner row-layout">
+      <div class="vertical-text chapter-char reveal" data-delay="0" style="color: var(--ny-amber);">年</div>
+      <div class="magazine-frame dark-frame frame-draw reveal" data-delay="400">
+        <div class="chapter-text">
+          <h2 class="chapter-title reveal" data-delay="800">以年为尺</h2>
+          <p class="chapter-sub reveal" data-delay="1000">谋长远 · 久久为功</p>
+          <div class="double-line-gold my-6 reveal" data-delay="1200"></div>
+          <span class="red-seal reveal" data-delay="1400">第三章</span>
+        </div>
+      </div>
+      <div class="corner-group">
+        <div class="corner-ornament tl reveal" data-delay="1600"></div>
+        <div class="corner-ornament tr reveal" data-delay="1600"></div>
+        <div class="corner-ornament bl reveal" data-delay="1600"></div>
+        <div class="corner-ornament br reveal" data-delay="1600"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 13: 年 · 十五五 -->
+  <section class="slide paper-bg" data-theme="light">
+    <div class="slide-inner">
+      <div class="slide-header reveal" data-delay="0">
+        <span class="red-seal">时代坐标</span>
+        <h2 class="slide-heading">从周期性波动到结构性挑战</h2>
+      </div>
+      <div class="double-line mt-4 mb-10 reveal" data-delay="200"></div>
+
+      <div class="two-columns panels">
+        <div class="magazine-frame panel frame-draw reveal" data-delay="400">
+          <p class="panel-lead">不追求一时热闹</p>
+          <div class="double-line my-4"></div>
+          <p class="panel-follow">建立可持续的青年成长机制</p>
+        </div>
+        <div class="magazine-frame panel frame-draw reveal" data-delay="700">
+          <p class="panel-lead">不急于短期变现</p>
+          <div class="double-line my-4"></div>
+          <p class="panel-follow">深耕用户价值与IP长效运营</p>
+        </div>
+      </div>
+
+      <div class="magazine-frame center-statement frame-draw reveal" data-delay="1100">
+        <p>我们传播的不只是一个答案，也是一种面对世界的方法</p>
+      </div>
+
+      <p class="bottom-quote reveal" data-delay="1500">把每一年都当作扎根之年，真正做到久久为功、行稳致远</p>
+      <p class="page-num reveal" data-delay="1700">— 13 —</p>
+    </div>
+  </section>
+
+  <!-- Slide 14: Final Manifesto -->
+  <section class="slide paper-bg-dark" data-theme="dark">
+    <div class="slide-inner final">
+      <p class="latin-caption gold reveal" data-delay="0">LA JEUNESSE × AI</p>
+
+      <div class="cartouche-frame final-frame frame-draw reveal" data-delay="400">
+        <div class="cartouche-flourish top"></div>
+        <div class="cartouche-flourish bottom"></div>
+        <div class="text-center px-10 py-6">
+          <h2 class="final-title reveal" data-delay="900">答案在路上</h2>
+          <div class="double-line-gold my-5 reveal" data-delay="1100"></div>
+          <p class="final-sub reveal" data-delay="1300">新青年正同行</p>
+          <p class="final-invite reveal" data-delay="1500">邀请更多新青年携手共创</p>
+        </div>
+      </div>
+
+      <p class="final-line reveal" data-delay="1800">我们是新青年，我们是传媒人</p>
+      <p class="final-credit reveal" data-delay="2000">SMG青马4组 · 2025</p>
+
+      <div class="dust" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- UI Controls -->
+<div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+<div class="slide-counter" id="slideCounter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></div>
+<div class="nav-hint" id="navHint">
+  <span>← → 翻页</span>
+  <span>·</span>
+  <span>空格 下一页</span>
+  <span>·</span>
+  <span>F 全屏</span>
+</div>
+
+<script>
+(function() {
+  const slides = document.querySelectorAll('.slide');
+  const currentEl = document.getElementById('currentSlide');
+  const totalEl = document.getElementById('totalSlides');
+  const progressFill = document.getElementById('progressFill');
+  let current = 0;
+  let isAnimating = false;
+
+  totalEl.textContent = slides.length;
+
+  function updateUI() {
+    currentEl.textContent = current + 1;
+    progressFill.style.width = ((current + 1) / slides.length * 100) + '%';
+  }
+
+  function resetSlide(slide) {
+    slide.querySelectorAll('.reveal').forEach(el => el.classList.remove('revealed'));
+  }
+
+  function showSlide(index, direction) {
+    if (index < 0 || index >= slides.length || isAnimating) return;
+    isAnimating = true;
+
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active', 'prev');
+      resetSlide(slide);
+    });
+
+    if (direction === 'next' && index > 0) {
+      slides[index - 1].classList.add('prev');
+    } else if (direction === 'prev') {
+      slides[index + 1]?.classList.add('prev');
+    }
+
+    const target = slides[index];
+    target.classList.add('active');
+    current = index;
+    updateUI();
+
+    const reveals = Array.from(target.querySelectorAll('.reveal'));
+    reveals.forEach(el => {
+      const delay = parseInt(el.dataset.delay, 10) || 0;
+      setTimeout(() => {
+        if (target.classList.contains('active')) {
+          el.classList.add('revealed');
+        }
+      }, delay);
+    });
+
+    setTimeout(() => { isAnimating = false; }, 700);
+  }
+
+  function next() { showSlide(current + 1, 'next'); }
+  function prev() { showSlide(current - 1, 'prev'); }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.target.tagName === 'VIDEO') return;
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'ArrowDown' || e.key === 'PageDown') {
+      e.preventDefault();
+      next();
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'PageUp') {
+      e.preventDefault();
+      prev();
+    } else if (e.key === 'f' || e.key === 'F') {
+      toggleFullscreen();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('video') || e.target.closest('nav-hint')) return;
+    const x = e.clientX;
+    if (x > window.innerWidth * 0.62) next();
+    else if (x < window.innerWidth * 0.38) prev();
+  });
+
+  let touchStartX = 0;
+  document.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', (e) => {
+    const diff = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(diff) > 50) diff < 0 ? next() : prev();
+  }, { passive: true });
+
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(() => {});
+    } else {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+
+  window.addEventListener('resize', () => { document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px'); });
+  document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
+
+  showSlide(0, 'next');
+})();
+</script>
+
+<style>
+/* ============================================
+   新青年 · 答案在路上 — Magazine Presentation
+   Digital recreation of La Jeunesse magazine cover
+   ============================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #1A1A1A;
+  font-family: var(--ny-font-body);
+  color: var(--ny-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- Deck & Slides ---- */
+.deck {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  overflow: hidden;
+}
+.slide.active {
+  display: flex;
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 2;
+}
+.slide.prev {
+  display: flex;
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+.slide[data-theme="dark"] {
+  --frame-color: #F5F0E8;
+  --divider-color: rgba(245,240,232,0.6);
+  --text-color: #F5F0E8;
+}
+.slide[data-theme="light"] {
+  --frame-color: #1A1A1A;
+  --divider-color: #1A1A1A;
+  --text-color: #1A1A1A;
+}
+
+.slide-inner {
+  width: 100%;
+  max-width: 1200px;
+  padding: 64px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.slide-inner.narrow { max-width: 900px; }
+
+/* ---- Paper Backgrounds ---- */
+.paper-bg {
+  background: #F5F0E8;
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(200,16,46,0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(26,26,26,0.05) 0%, transparent 50%);
+}
+.paper-bg-dark {
+  background: #1A1A1A;
+  background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(200,16,46,0.12) 0%, transparent 60%);
+}
+
+/* ---- Cartouche Frame ---- */
+.cartouche-frame {
+  border: 2px solid var(--frame-color, #1A1A1A);
+  border-radius: 120px 120px 8px 8px / 40px 40px 4px 4px;
+  position: relative;
+  background: rgba(245,240,232,0.6);
+  padding: 48px 72px;
+}
+.cartouche-frame::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid var(--frame-color, #1A1A1A);
+  border-radius: 110px 110px 6px 6px / 36px 36px 3px 3px;
+  pointer-events: none;
+}
+.cartouche-flourish {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 22px;
+  border: 2px solid var(--frame-color, #1A1A1A);
+  border-bottom: none;
+  border-radius: 50px 50px 0 0 / 20px 20px 0 0;
+  background: transparent;
+  pointer-events: none;
+}
+.cartouche-flourish.top { top: -13px; }
+.cartouche-flourish.bottom {
+  bottom: -13px;
+  transform: translateX(-50%) rotate(180deg);
+}
+.slide[data-theme="dark"] .cartouche-frame {
+  background: rgba(245,240,232,0.08);
+}
+
+/* ---- Magazine Frame ---- */
+.magazine-frame {
+  border: 2px solid var(--frame-color, #1A1A1A);
+  position: relative;
+  background: rgba(245,240,232,0.5);
+  padding: 28px;
+}
+.magazine-frame::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid var(--frame-color, #1A1A1A);
+  pointer-events: none;
+}
+.magazine-frame.dark-frame {
+  background: rgba(245,240,232,0.05);
+}
+
+/* ---- Vertical Text ---- */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.25em;
+}
+
+/* ---- Red Seal ---- */
+.red-seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #C8102E;
+  color: #F5F0E8;
+  padding: 6px 16px;
+  font-family: "Noto Serif SC", serif;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  font-size: 14px;
+  border-radius: 1px;
+}
+
+/* ---- Dividers ---- */
+.double-line {
+  height: 6px;
+  border-top: 2px solid var(--divider-color, #1A1A1A);
+  border-bottom: 1px solid var(--divider-color, #1A1A1A);
+  width: 100%;
+}
+.double-line-gold {
+  height: 6px;
+  border-top: 2px solid #D4A843;
+  border-bottom: 1px solid #D4A843;
+  width: 100%;
+}
+
+/* ---- Corner Ornaments ---- */
+.corner-ornament {
+  width: 24px;
+  height: 24px;
+  border-top: 2px solid var(--frame-color, #1A1A1A);
+  border-left: 2px solid var(--frame-color, #1A1A1A);
+  position: absolute;
+}
+.corner-ornament.tr { transform: rotate(90deg); }
+.corner-ornament.br { transform: rotate(180deg); }
+.corner-ornament.bl { transform: rotate(270deg); }
+.corner-group { position: absolute; inset: 40px; pointer-events: none; }
+.corner-group .tl { top: 0; left: 0; }
+.corner-group .tr { top: 0; right: 0; }
+.corner-group .bl { bottom: 0; left: 0; }
+.corner-group .br { bottom: 0; right: 0; }
+
+/* ---- Reveal Animations ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.frame-draw {
+  opacity: 0;
+  transform: scale(0.92);
+  clip-path: inset(50% 50% 50% 50%);
+  transition: opacity 0.7s ease, transform 0.8s cubic-bezier(0.34,1.56,0.64,1), clip-path 1s cubic-bezier(0.4,0,0.2,1);
+}
+.frame-draw.revealed {
+  opacity: 1;
+  transform: scale(1);
+  clip-path: inset(0 0 0 0);
+}
+
+/* ---- Slide 1: Cover ---- */
+.cover-title {
+  font-family: "Noto Serif SC", serif;
+  font-weight: 900;
+  font-size: 96px;
+  color: #C8102E;
+  letter-spacing: 0.3em;
+  line-height: 1;
+  margin-left: 0.3em;
+}
+.cover-title span { display: inline-block; }
+.la-jeunesse {
+  font-family: var(--ny-font-latin);
+  font-size: 28px;
+  color: #1A1A1A;
+  letter-spacing: 0.15em;
+  margin-top: 12px;
+}
+.cover-subtitle {
+  font-family: "Noto Serif SC", serif;
+  font-size: 16px;
+  color: #C8102E;
+  letter-spacing: 0.25em;
+  margin-top: 10px;
+}
+.main-title {
+  font-family: "Noto Serif SC", serif;
+  font-weight: 700;
+  font-size: 52px;
+  color: #1A1A1A;
+  letter-spacing: 0.12em;
+}
+.gold-sub {
+  font-family: "Noto Serif SC", serif;
+  font-size: 22px;
+  color: #D4A843;
+  letter-spacing: 0.15em;
+}
+.cover-desc {
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 16px;
+  color: #1A1A1A;
+  letter-spacing: 0.08em;
+  margin-top: 12px;
+}
+.issue {
+  font-family: "Noto Serif SC", serif;
+  font-size: 18px;
+  color: #C8102E;
+  letter-spacing: 0.2em;
+  margin-top: 24px;
+}
+.publisher {
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 14px;
+  color: #1A1A1A;
+  letter-spacing: 0.1em;
+  margin-top: 8px;
+}
+
+/* ---- Slide 2: Contents ---- */
+.section-title {
+  font-family: "Noto Serif SC", serif;
+  font-size: 32px;
+  color: #C8102E;
+  letter-spacing: 0.3em;
+  text-align: center;
+}
+.contents-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 24px 32px;
+}
+.vertical-col {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.25em;
+  font-family: "Noto Serif SC", serif;
+  font-size: 16px;
+  color: #1A1A1A;
+  line-height: 2.2;
+  text-align: center;
+  margin: 0 auto;
+}
+.vertical-col .year {
+  font-size: 30px;
+  color: #C8102E;
+  font-weight: 700;
+}
+.horizontal-col {
+  font-family: "Noto Serif SC", serif;
+  font-size: 16px;
+  color: #1A1A1A;
+  line-height: 2.2;
+  text-align: left;
+}
+.horizontal-col .year {
+  font-size: 30px;
+  color: #C8102E;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.horizontal-col .big-question {
+  font-size: 22px;
+  font-weight: 700;
+  color: #C8102E;
+  margin-top: 12px;
+}
+.separator {
+  font-family: "Noto Serif SC", serif;
+  font-size: 120px;
+  color: #C8102E;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+/* ---- Slide 3: Three Characters ---- */
+.latin-caption {
+  font-family: var(--ny-font-latin);
+  font-size: 18px;
+  color: #8C8C8C;
+  letter-spacing: 0.15em;
+  margin-bottom: 32px;
+}
+.latin-caption.gold { color: #D4A843; }
+.three-chars {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+}
+.char-box {
+  width: 220px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.char-main {
+  font-family: "Noto Serif SC", serif;
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.char-label {
+  font-family: "Noto Serif SC", serif;
+  font-size: 18px;
+  color: #1A1A1A;
+  letter-spacing: 0.15em;
+}
+.center-question {
+  font-family: "Noto Serif SC", serif;
+  font-size: 18px;
+  color: #1A1A1A;
+  letter-spacing: 0.05em;
+  margin-top: 48px;
+  text-align: center;
+}
+
+/* ---- Chapter Openers ---- */
+.row-layout {
+  flex-direction: row;
+  gap: 64px;
+  position: relative;
+}
+.chapter-char {
+  font-family: "Noto Serif SC", serif;
+  font-weight: 900;
+  font-size: 140px;
+  line-height: 1;
+}
+.chapter-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.chapter-title {
+  font-family: "Noto Serif SC", serif;
+  font-size: 40px;
+  color: #F5F0E8;
+  letter-spacing: 0.12em;
+}
+.chapter-sub {
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 18px;
+  color: #D4A843;
+  letter-spacing: 0.15em;
+}
+
+/* ---- Common Slide Header ---- */
+.slide-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+.slide-heading {
+  font-family: "Noto Serif SC", serif;
+  font-size: 28px;
+  color: var(--text-color, #1A1A1A);
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+.page-num {
+  font-family: "Noto Serif SC", serif;
+  font-size: 14px;
+  color: rgba(26,26,26,0.4);
+  letter-spacing: 0.3em;
+  margin-top: 32px;
+  text-align: center;
+}
+.slide[data-theme="dark"] .page-num { color: rgba(245,240,232,0.4); }
+
+/* ---- Card Grids ---- */
+.card-grid {
+  display: grid;
+  gap: 28px;
+  width: 100%;
+}
+.card-grid.four-cards { grid-template-columns: repeat(2, 1fr); }
+.card-grid.three-cards { grid-template-columns: repeat(3, 1fr); }
+.value-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 0;
+  overflow: hidden;
+}
+.value-card .card-bar {
+  height: 5px;
+  width: calc(100% + 56px);
+  margin: -28px -28px 6px -28px;
+}
+.value-card h3 {
+  font-family: "Noto Serif SC", serif;
+  font-size: 28px;
+  color: var(--text-color, #1A1A1A);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.value-card p {
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 16px;
+  color: var(--text-color, #1A1A1A);
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+/* ---- Slide 6: Innovation ---- */
+.split-layout {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+  align-items: stretch;
+}
+.text-panel {
+  flex: 0 0 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.typing-line {
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 17px;
+  color: #1A1A1A;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+}
+.video-panel {
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.video-label { align-self: flex-start; }
+.video-frame {
+  padding: 8px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+}
+.video-frame video {
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+.banner {
+  width: 100%;
+  margin-top: 28px;
+  text-align: center;
+}
+.banner p {
+  font-family: "Noto Serif SC", serif;
+  font-size: 18px;
+  color: #C8102E;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+/* ---- Slide 7 & 13: Two Columns ---- */
+.two-columns {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+}
+.column-card, .panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+}
+.column-card .card-bar, .panel .card-bar {
+  height: 5px;
+  width: calc(100% + 56px);
+  margin: -28px -28px 6px -28px;
+}
+.column-card h3, .panel .panel-lead {
+  font-family: "Noto Serif SC", serif;
+  font-size: 26px;
+  color: var(--text-color, #1A1A1A);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.column-card p, .panel .panel-follow {
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 16px;
+  color: var(--text-color, #1A1A1A);
+  line-height: 1.8;
+  opacity: 0.9;
+}
+.bottom-note {
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 15px;
+  color: var(--text-color, #1A1A1A);
+  opacity: 0.7;
+  text-align: center;
+  margin-top: 28px;
+  letter-spacing: 0.03em;
+}
+
+/* ---- Slide 9: Milestones ---- */
+.milestone-path {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto 48px;
+}
+.milestone-path::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--divider-color, #1A1A1A);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.4s ease;
+}
+.milestone-path.revealed::before { transform: scaleX(1); }
+.milestone {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 2px solid var(--frame-color, #1A1A1A);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #F5F0E8;
+  z-index: 1;
+  text-align: center;
+  gap: 6px;
+}
+.milestone span {
+  font-family: "Noto Serif SC", serif;
+  font-size: 14px;
+  color: #C8102E;
+  font-weight: 700;
+}
+.milestone p {
+  font-family: "Noto Serif SC", serif;
+  font-size: 15px;
+  color: #1A1A1A;
+  letter-spacing: 0.05em;
+}
+.quote-frame {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+.quote-frame p {
+  font-family: "Noto Serif SC", serif;
+  font-size: 18px;
+  color: #1A1A1A;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+}
+
+/* ---- Slide 10: Quote ---- */
+.quote-italic {
+  font-family: "Noto Serif SC", serif;
+  font-size: 20px;
+  color: #1A1A1A;
+  font-style: italic;
+  letter-spacing: 0.08em;
+  margin-top: 32px;
+  text-align: center;
+}
+
+/* ---- Slide 11: Tag Cloud ---- */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+.tag {
+  font-family: "Noto Serif SC", serif;
+  font-size: 18px;
+  color: #1A1A1A;
+  letter-spacing: 0.08em;
+  padding: 14px 24px;
+  cursor: default;
+}
+.center-statement {
+  max-width: 720px;
+  width: 100%;
+  text-align: center;
+}
+.center-statement p {
+  font-family: "Noto Serif SC", serif;
+  font-size: 22px;
+  color: var(--text-color, #1A1A1A);
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+/* ---- Slide 13: Panels ---- */
+.panels .panel { text-align: center; }
+.bottom-quote {
+  font-family: "Noto Serif SC", serif;
+  font-size: 17px;
+  color: #C8102E;
+  text-align: center;
+  margin-top: 28px;
+  letter-spacing: 0.04em;
+}
+
+/* ---- Slide 14: Final ---- */
+.slide-inner.final { position: relative; }
+.final-frame {
+  width: 100%;
+  max-width: 680px;
+  background: rgba(245,240,232,0.08);
+}
+.final-title {
+  font-family: "Noto Serif SC", serif;
+  font-weight: 900;
+  font-size: 56px;
+  color: #C8102E;
+  letter-spacing: 0.15em;
+}
+.final-sub {
+  font-family: "Noto Serif SC", serif;
+  font-size: 28px;
+  color: #D4A843;
+  letter-spacing: 0.15em;
+}
+.final-invite {
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 18px;
+  color: #F5F0E8;
+  letter-spacing: 0.08em;
+  opacity: 0.9;
+}
+.final-line {
+  font-family: "Noto Serif SC", serif;
+  font-size: 24px;
+  color: #F5F0E8;
+  letter-spacing: 0.1em;
+  margin-top: 40px;
+}
+.final-credit {
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 12px;
+  color: #8C8C8C;
+  letter-spacing: 0.1em;
+  margin-top: 16px;
+}
+
+/* Dust particles */
+.dust {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.dust span {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(245,240,232,0.25);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
+}
+.dust span:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+.dust span:nth-child(2) { left: 25%; top: 70%; animation-delay: 1s; }
+.dust span:nth-child(3) { left: 40%; top: 30%; animation-delay: 2s; }
+.dust span:nth-child(4) { left: 55%; top: 80%; animation-delay: 3s; }
+.dust span:nth-child(5) { left: 70%; top: 25%; animation-delay: 4s; }
+.dust span:nth-child(6) { left: 85%; top: 60%; animation-delay: 5s; }
+.dust span:nth-child(7) { left: 15%; top: 85%; animation-delay: 2.5s; }
+.dust span:nth-child(8) { left: 60%; top: 15%; animation-delay: 3.5s; }
+.dust span:nth-child(9) { left: 78%; top: 45%; animation-delay: 1.5s; }
+.dust span:nth-child(10) { left: 33%; top: 55%; animation-delay: 4.5s; }
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.2; }
+  50% { transform: translateY(-30px) translateX(10px); opacity: 0.5; }
+}
+
+/* ---- UI Controls ---- */
+.progress-track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(26,26,26,0.1);
+  z-index: 100;
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #C8102E;
+  transition: width 0.4s ease;
+}
+.slide-counter {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Noto Serif SC", serif;
+  font-size: 13px;
+  color: rgba(26,26,26,0.5);
+  letter-spacing: 0.15em;
+  z-index: 100;
+}
+.nav-hint {
+  position: fixed;
+  bottom: 20px;
+  right: 24px;
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 12px;
+  color: rgba(26,26,26,0.35);
+  letter-spacing: 0.05em;
+  z-index: 100;
+  display: flex;
+  gap: 8px;
+}
+.slide[data-theme="dark"] ~ .progress-track { background: rgba(245,240,232,0.1); }
+.slide[data-theme="dark"] ~ .slide-counter { color: rgba(245,240,232,0.5); }
+.slide[data-theme="dark"] ~ .nav-hint { color: rgba(245,240,232,0.35); }
+
+/* ---- Utility ---- */
+.text-center { text-align: center; }
+.my-4 { margin-top: 16px; margin-bottom: 16px; }
+.my-5 { margin-top: 20px; margin-bottom: 20px; }
+.my-6 { margin-top: 24px; margin-bottom: 24px; }
+.mt-4 { margin-top: 16px; }
+.mt-8 { margin-top: 32px; }
+.mt-10 { margin-top: 40px; }
+.mb-8 { margin-bottom: 32px; }
+.mb-10 { margin-bottom: 40px; }
+.mb-12 { margin-bottom: 48px; }
+.px-8 { padding-left: 32px; padding-right: 32px; }
+.px-10 { padding-left: 40px; padding-right: 40px; }
+.py-4 { padding-top: 16px; padding-bottom: 16px; }
+.py-6 { padding-top: 24px; padding-bottom: 24px; }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .slide-inner { padding: 48px; }
+  .cover-title { font-size: 72px; }
+  .main-title { font-size: 42px; }
+  .three-chars { gap: 24px; }
+  .char-box { width: 180px; min-height: 260px; }
+  .char-main { font-size: 80px; }
+  .chapter-char { font-size: 110px; }
+  .milestone { width: 110px; height: 110px; }
+}
+
+@media (max-width: 768px) {
+  .slide-inner { padding: 32px 24px; }
+  .cover-title { font-size: 56px; letter-spacing: 0.2em; }
+  .la-jeunesse { font-size: 22px; }
+  .cartouche-frame { padding: 36px 40px; }
+  .main-title { font-size: 34px; }
+  .three-chars { flex-direction: column; align-items: center; }
+  .char-box { width: 160px; min-height: 180px; }
+  .row-layout { flex-direction: column; gap: 32px; }
+  .chapter-char { font-size: 100px; }
+  .card-grid.four-cards, .card-grid.three-cards { grid-template-columns: 1fr; }
+  .split-layout, .two-columns { flex-direction: column; }
+  .milestone-path { flex-wrap: wrap; gap: 20px; }
+  .milestone-path::before { display: none; }
+  .contents-grid { grid-template-columns: 1fr; gap: 24px; }
+  .separator { display: none; }
+  .horizontal-col { text-align: center; }
+  .nav-hint { display: none; }
+}
+</style>
+
+</body>
+</html>
